@@ -32,6 +32,6 @@ fi
 
 CHANNEL=${2:-#ehoh}
 USERNAME=${3:-coach}
-TEXT=${4:-<!here> lets get ready to rumble}
+TEXT=${4:-"<!here> lets get ready to rumble"}
 EMOJI=${5:-:muscle:}
-curl -X POST --data-urlencode 'payload={"channel": "'$CHANNEL'", "username": "'$USERNAME'", "text": "'$TEXT'", "icon_emoji": "'$EMOJI'"}' $1
+curl -X POST --data-urlencode 'payload={"channel": "'$CHANNEL'", "username": "'$USERNAME'", "text": "'"$TEXT"'", "icon_emoji": "'$EMOJI'"}' $1
